@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cek Misi</title>
+<style>
+body{font-family:sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}
+.card{background:#1e293b;padding:30px;border-radius:15px;text-align:center;width:90%;max-width:400px;box-shadow:0 10px 25px rgba(0,0,0,0.5)}
+input{width:90%;padding:12px;border-radius:8px;border:none;margin:15px 0;text-align:center}
+button{background:#38bdf8;color:#0f172a;border:none;padding:12px 20px;border-radius:8px;font-weight:bold;width:100%;cursor:pointer}
+button:hover{background:#0ea5e9}
+#hasil{margin-top:15px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>🔍 Cek Misi</h2>
+<p>Masukkan ID / Username kamu</p>
+<input type="text" id="idMisi" placeholder="Contoh: Rose123">
+<button onclick="cek()">CEK SEKARANG</button>
+<p id="hasil"></p>
+</div>
+<script>
+function cek(){
+  let id = document.getElementById(\'idMisi\').value;
+  let hasil = document.getElementById(\'hasil\');
+  if(id == ""){
+    hasil.innerHTML = "⚠️ Isi dulu ID nya bro!";
+    hasil.style.color = "yellow";
+  } else {
+    hasil.innerHTML = "✅ Misi untuk ID <b>" + id + "</b> DITEMUKAN!";
+    hasil.style.color = "#4ade80";
+  }
+}
+</script>
+</body>
+</html>
